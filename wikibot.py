@@ -1,9 +1,17 @@
-# Import Wikipedia
-import wikipedia
+# Integrate Click, Wikipedia
+import click
+from mylib.bot import search
 
+@click.command()
+@click.option('--query', prompt='Wikipedia Query to search',
+              help='The query we want to search in Wikipedia.')
+@click.option('--length', default=4,
+              help='The number of sentences to return in the search result.')
 
 # Returns the summary of the search query
-def search(query, length=4):
-    return wikipedia.summary(query, sentences=length)
+def searcher (query, length):
+    result = search(query, length=length)
+    click.echo(click.style(f"{result}", fg='red'))
 
-print(search("Python programming"))
+if __name__ == '__main__':
+    searcher ()
