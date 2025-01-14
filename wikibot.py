@@ -9,7 +9,7 @@ from mylib.bot import search
               help='The number of sentences to return in the search result.')
 
 # Returns the summary of the search query
-def searcher (query, length):
+def searcher (query = "Bill Gates", length = 5):
     result = search(query, length=length)
     click.echo(click.style(f"{result}", fg='red'))
 
