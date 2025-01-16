@@ -4,3 +4,4 @@ black
 wikipedia
 ipython
 fire
+pyspark
