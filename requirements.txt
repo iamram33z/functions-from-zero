@@ -5,3 +5,7 @@ wikipedia
 ipython
 fire
 pyspark
+snowflake-connector-python
+pyarrow
+jupyter
+jupyterlab
